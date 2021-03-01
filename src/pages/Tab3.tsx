@@ -12,7 +12,6 @@ import {
 import React from "react";
 import { Route } from "react-router";
 import ExploreContainer from "../components/ExploreContainer";
-import "./Tab3.css";
 
 const Tab3Base: React.FC = () => {
   return (

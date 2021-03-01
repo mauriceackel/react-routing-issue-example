@@ -1,9 +1,9 @@
+import React from "react";
 import { Redirect, Route } from "react-router-dom";
 import {
   IonApp,
   IonIcon,
   IonLabel,
-  IonPage,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
@@ -14,6 +14,8 @@ import { ellipse, square, triangle } from "ionicons/icons";
 import Tab1 from "./pages/Tab1";
 import Tab2 from "./pages/Tab2";
 import Tab3 from "./pages/Tab3";
+import Tab4 from "./pages/Tab4";
+import NoTab from "./pages/NoTab";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -33,7 +35,6 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
-import React from "react";
 
 const App: React.FC = () => (
   <IonApp>
@@ -43,13 +44,15 @@ const App: React.FC = () => (
           <Route path="/tab1/">
             <Tab1 />
           </Route>
-
           <Route path="/tab2/">
             <Tab2 />
           </Route>
           <Route path="/tab3/">
             <Tab3 />
           </Route>
+          <Route path="/tab4/" component={Tab4} />
+          <Route path="/notab/" component={NoTab} />
+
           <Route exact path="/">
             <Redirect to="/tab1/" />
           </Route>
@@ -66,6 +69,10 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/tab3/">
             <IonIcon icon={square} />
             <IonLabel>Tab 3</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4/">
+            <IonIcon icon={square} />
+            <IonLabel>Tab 4</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

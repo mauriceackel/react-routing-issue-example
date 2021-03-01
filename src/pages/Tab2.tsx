@@ -12,7 +12,6 @@ import {
 import React from "react";
 import { Route, useHistory } from "react-router";
 import ExploreContainer from "../components/ExploreContainer";
-import "./Tab2.css";
 
 export const Tab2Base: React.FC = () => {
   const history = useHistory();
