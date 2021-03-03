@@ -32,11 +32,14 @@ const SignIn: React.FC = () => {
         <ExploreContainer>
           1.Open the browser dev tools.
           <br />
-          2. Switch between tab 1 and 2.
+          2. Click on tab 2 to make sure it is added to the DOM.
+          <br />
+          3. Click the signin button.
           <br />
           <br />
-          Tab 1 will be kept alive while tab 2 will be removed from the DOM as
-          soon as you navigate back to tab 1.
+          Both conditional routes will change which page they render. They will
+          end up having weird states in the ion-router-outlet, which leads to
+          display issues when switching the tabs now.
           <br />
           <br />
           <IonButton onClick={() => setSignedIn(true)}>SignIn</IonButton>

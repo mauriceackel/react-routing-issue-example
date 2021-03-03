@@ -33,7 +33,6 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import SignIn from "./pages/Signin";
-import PrivateRoute from "./components/PrivateRoute";
 
 export const AuthContext = React.createContext<{
   signedIn: boolean;
@@ -62,9 +61,16 @@ const App: React.FC = () => {
                 path="/tab1/sub1/"
                 render={() => (signedIn ? <Tab1Sub1 /> : <SignIn />)}
               />
-
-              <PrivateRoute exact path="/tab2/" component={Tab2} />
-              <PrivateRoute exact path="/tab2/sub1/" component={Tab2Sub1} />
+              <Route
+                exact
+                path="/tab2/"
+                render={() => (signedIn ? <Tab2 /> : <SignIn />)}
+              />
+              <Route
+                exact
+                path="/tab2/sub1/"
+                render={() => (signedIn ? <Tab2Sub1 /> : <SignIn />)}
+              />
 
               <Route exact path="/">
                 <Redirect to="/tab1/" />
