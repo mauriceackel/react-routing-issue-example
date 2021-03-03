@@ -12,38 +12,38 @@ import {
 import React, { useRef, useState } from "react";
 import ExploreContainer from "../components/ExploreContainer";
 
-const Tab1: React.FC = () => {
+const Tab2: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Tab 2</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
         <ExploreContainer>
           Please go to the sub page here
           <br />
-          <IonButton routerLink="/tab1/sub1/">To sub page 1</IonButton>
+          <IonButton routerLink="/tab2/sub1/">To sub page 1</IonButton>
         </ExploreContainer>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab1;
+export default Tab2;
 
-export const Tab1Sub1: React.FC = () => {
+export const Tab2Sub1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1 Sub 1</IonTitle>
+          <IonTitle>Tab 2 Sub 1</IonTitle>
           <IonButtons>
             <IonBackButton />
           </IonButtons>
